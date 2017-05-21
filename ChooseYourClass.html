@@ -1,0 +1,55 @@
+<DOCTYPE html>
+<html>
+<script>
+	var bgClass = "";
+	var myClass = "";
+
+	function askClass() {
+		var bgClass = "";
+
+	}
+
+	function buttonPressPeasant() {
+		bgClass = "peasant";
+		getClass();
+	}
+
+	function buttonPressArtisan() {
+		bgClass = "artisan";
+		getClass();
+	}
+
+	function buttonPressKnight() {
+		bgClass = "knight";
+		getClass();
+	}
+
+	function buttonPressRoyalty() {
+		bgClass = "royalty";
+		getClass();
+	}
+
+	function getClass() {
+		myClass = ""
+		switch (bgClass) {
+			case ("peasant"):
+				myClass = "Peasant";
+			case ("artisan"):
+				myClass = "Artisan";
+			case ("knight"):
+				myClass = "Knight";
+			case ("royalty"):
+				myClass = "Royalty";
+		document.getElementById("class").innerHTML = "Your class is" + " " + myClass;
+		}
+	}
+
+</script>
+<body>
+<button onclick="buttonPressPeasant()">Peasant</button>
+<button onclick="buttonPressArtisan()">Artisan</button>
+<button onclick="buttonPressKnight()">Knight</button>
+<button onclick="buttonPressRoyalty()">Royalty</button>
+<p id="class"></p>
+</body>
+</html>
